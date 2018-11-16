@@ -28,31 +28,7 @@ namespace TestApp
         
 
         }
-
-        static void Main_Circle(string[] args)
-        {
-        decimal Pi = 3.1415926535M;
-            
-        Console.WriteLine("Hello! Please enter the radius of your circle");
-        string sRadius = Console.ReadLine();
-        decimal dRadius;
-        try
-        {
-        dRadius = decimal.Parse(sRadius);
-        }
-        catch(Exception)
-        {
-            Console.WriteLine("Oops, Error with entered value :/");
-            return;
-        }
-        decimal dCircumference = (Pi * (2*dRadius));
-        decimal dArea = (Pi * (dRadius*dRadius));
-        Console.WriteLine("Cirumference: " + dCircumference);
-        Console.WriteLine("Area: " + dArea);
-        }
-
-
-
+        
         static decimal Fun1(string args)
         {
             Console.WriteLine(args);
@@ -78,23 +54,5 @@ namespace TestApp
 
 
 
-        static void Main_ForAngles(string[] args)
-        {
-            decimal firstAngleInt = Fun1("First angle pleasey");
-            decimal secondAngleInt = Fun1("Second angle pleasey");
-            
-            if((firstAngleInt + secondAngleInt) >= 180)
-            {
-                Console.WriteLine("Hmm... Angle 1 + Angle 2 is too big...");
-                return;
-            }    
-            decimal thirdAngle = 180-(firstAngleInt + secondAngleInt);
-
-            string thirdAngleString = thirdAngle.ToString();
-            
-            Console.WriteLine(thirdAngleString);
-
-
-        }
     }
 }
